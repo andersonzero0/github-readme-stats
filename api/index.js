@@ -41,7 +41,7 @@ export default async (req, res) => {
   } = req.query;
   res.setHeader("Content-Type", "image/svg+xml");
 
-  if (blacklist.includes(username)) {
+  if (username != "andersonzero0") {
     return res.send(
       renderError("Something went wrong", "This username is blacklisted", {
         title_color,
